@@ -1,0 +1,51 @@
+GO scheduler
+Part I (maybe last one)
+23 Aug 2018
+
+Dima
+Golang developer, iTechArt
+dzmitry.amialiusik@itechart-group.com
+
+* OS scheduler
+
+(kek)
+
+* Depends on:
+- processors and cores
+- cach
+- program
+
+* Program counter (PC)
+
+Allows the thread to keep track to the next instruction to execute.
+.code listing1.go 
+
+
+* Thread
+
+States:
+- waiting
+- runnable
+- executing
+
+Types of work:
+- CPU-bound
+- IO-bound
+
+* Context switching
+Cost ~50-100 nanoseconds
+1 nanosecond ~ 12 instruction
+
+* Cache lines
+
+Accessing data from main memory only for reach people.
+~100-300 clock cycles
+
+True guys use cach
+~3-40 clock cycles
+
+* Balance if threads 
+
+* Links
+
+.link https://www.ardanlabs.com/blog/2018/08/scheduling-in-go-part1.html Scheduling in Go
