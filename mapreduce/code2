@@ -1,0 +1,1 @@
+reduce (out_key, list(intermediate_value)) -> list(out_value)

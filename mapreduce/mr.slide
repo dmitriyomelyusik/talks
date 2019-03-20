@@ -1,0 +1,36 @@
+MapReduce
+49 Feb 2019
+
+Дима
+Golang developer, iTechArt
+dzmitry.amialiusik@itechart-group.com
+
+* MapReduce == map + reduce?
+.image mapreduce.png
+
+* Classic version
+.image schema.gif
+- автоматическое распараллеливание и распределение
+- отказоустойчивость
+- I/O планировка
+- мониторинг
+
+* А что же надо писать ручками?
+.image dasha.jpg
+
+* Тока две функции!
+- Map
+.code code1
+- Reduce
+.code code2
+
+* Где-то есть вообще это?
+MapReduce Programs In Google Source Tree
+.image google.png
+
+* Окей, а причём тут Go?
+.image gopher.jpg
+
+* Links
+
+.link https://research.google.com/archive/mapreduce-osdi04-slides/index-auto-0026.html гугловские замарочки
