@@ -8,6 +8,10 @@ dzmitry.amialiusik@itechart-group.com
 * MapReduce == map + reduce?
 .image mapreduce.png
 
+* 
+.link https://research.google.com/archive/mapreduce-osdi04-slides/index-auto-0026.html гугловские замарочки
+
+
 * Classic version
 .image schema.gif
 - автоматическое распараллеливание и распределение
@@ -31,6 +35,55 @@ MapReduce Programs In Google Source Tree
 * Окей, а причём тут Go?
 .image gopher.jpg
 
+* Gleam
+- High Performance
+- Memory Efficient
+- Flexible
+- Easy to Customize
+(c) gleam developers
+
+* Gleam
+.link https://github.com/chrislusf/gleam/blob/master/examples/word_count_in_go/word_count_in_go.go кодяра
+вывод:
+.image output.png
+
+* Gleam
+.code wordcount.go /START OMIT/,/END OMIT/
+
+* Gleam
+.code interfaces
+
+* 
+*Gleam* *Driver*:
+та часть, которую пишем
+*Gleam* *Master*:
+хранит приходящую информацию о ресурсах
+управляет запросами driver'а на выделение нужных agent'ов
+*Gleam* *Agent*:
+переодически отправляют инфу master'у о использовании ресурсов
+стартует executor
+управляет dataset'ами от executor'ов
+*Gleam* *Executor*:
+стартуются agent'ами
+читают информацию с dataset'ов и генерируют вывод в новый dataset
+*Dataset*:
+контролируется agent'ами
+по умолчанию вся информация находится в памяти и в сети, опционально может быть записана на диск
+
+* Gleam Master
+.image master1.png
+
+* Gleam Agent
+.image agent1.png
+
+* Gleam distributed word count
+.image distributed1.png
+
+* Gleam и docker
+.link https://github.com/chrislusf/gleam/wiki/Gleam-on-Docker-Composed-Containers линка
+
 * Links
 
-.link https://research.google.com/archive/mapreduce-osdi04-slides/index-auto-0026.html гугловские замарочки
+.link https://github.com/chrislusf/gleam Gleam
+.link https://appliedgo.net/mapreduce/ велосипед
+.link https://github.com/ahamidi/go-mapreduce/blob/master/mapreduce.go симплвершн

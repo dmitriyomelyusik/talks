@@ -1,0 +1,5 @@
+type Mapper func([]interface{}) error
+type Reducer func(x, y interface{}) (interface{}, error)
+
+var ownMap = gio.RegisterMapper(yourMapper)  
+var ownReducer = gio.RegisterReducer(yourReducer)
